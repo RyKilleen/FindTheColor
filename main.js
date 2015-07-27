@@ -28,8 +28,6 @@ var initCounter = window.setInterval(counter.countUp, 100);
 
 
 app = {
-	$body : $("body"),
-
 	vars : {
 		
 		winWidth : ($(document).width())/255,
@@ -94,7 +92,7 @@ app = {
 	},
 
 	checkForWin : function() {
-		var backgroundColor = getTheRGB(app.$body.css("background-color"));
+		var backgroundColor = getTheRGB($body.css("background-color"));
 		var boxColor = getTheRGB(app.$box.css("background-color"));
 
 		if (app.compareColors(backgroundColor, boxColor)) {
